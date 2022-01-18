@@ -8,7 +8,7 @@
 <body>
 <?php 
 
-$db = mysqli_connect('localhost','azure','6#vWHD_$','localdb');
+$db = mysqli_connect('127.0.0.1:54446','azure','6#vWHD_$','localdb');
 if (!$db){ 
        echo "connection failed";
 }
