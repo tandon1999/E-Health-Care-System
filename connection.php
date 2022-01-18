@@ -1,21 +1,19 @@
-<?php
-  $SERVER = '127.0.0.1:54446';
-  $USERNAME = 'azure';
-  $PASSWORD = '6#vWHD_$';
-  $DB = 'localdb';
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>connection</title>
+</head>
 
-  @$con = mysqli_connect($SERVER, $USERNAME, $PASSWORD, $DB)
-  or
-  die("<div class='text-danger text-center h5'>Oops, Unable to connect with database!</div>");
+<body>
+<?php 
 
-  if(isset($_GET['action']) && $_GET['action'] == 'is_logged_in') {
-    $query = "SELECT IS_LOGGED_IN FROM admin_credentials";
-    $result = mysqli_query($con, $query);
-    if($result) {
-      $row = mysqli_fetch_array($result);
-      echo $row['IS_LOGGED_IN'];
-    }
-    else
-      echo "setup";
-  }
+$db = mysqli_connect('127.0.0.1:54446','azure','6#vWHD_$','localdb');
+if (!$db){ 
+       echo "connection failed";
+}
+error_reporting(0);
+
 ?>
+</body>
+</html>

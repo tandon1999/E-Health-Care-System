@@ -8,7 +8,7 @@
 <body>
 <?php 
 
-$db = mysqli_connect('localhost','root','','online_health_care');
+$db = mysqli_connect('127.0.0.1:54446','azure','6#vWHD_$','localdb');
 if (!$db){ 
        echo "connection failed";
 }
